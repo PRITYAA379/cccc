@@ -1,223 +1,192 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
+h1, h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Header Section */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff6347; /* Bright, eye-catching color */
-    padding: 20px 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #4b0082, #6a5acd);
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
 }
 
 .header .logo img {
-    width: 150px;
+    max-width: 100px;
+    margin-bottom: 15px;
 }
 
-.header nav ul {
-    list-style: none;
-    display: flex;
+.header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
 }
 
-.header nav ul li {
-    margin: 0 15px;
+.header p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
 }
 
-.header nav ul li a {
+.cta-button {
+    display: inline-block;
+    background-color: #ff4500;
     color: white;
-    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 20px;
-    background-color: #ffffff;
-    background-image: url('https://i.ibb.co/sJdGVcz/81o-S2sc-J5-GL-SL1500-510x510.jpg'); /* Add hero image */
-    background-size: cover;
-    background-position: center center;
-    color: white;
+    padding: 20px;
+    background: #ffffff;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
-.hero .cta-button {
-    background-color: #ffffff;
-    color: #ff6347;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.5rem;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.hero .cta-button:hover {
-    background-color: #e55347;
-    color: white;
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Features Section */
 .features {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background: #fff;
 }
 
 .features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.features .feature {
-    display: inline-block;
-    width: 30%;
-    margin: 0 10px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.features .feature:hover {
-    transform: scale(1.05);
-}
-
-.features .feature img {
-    width: 60px;
-    height: 60px;
+    font-size: 2rem;
     margin-bottom: 20px;
+    color: #333;
 }
 
-.features .feature h3 {
-    font-size: 1.5rem;
+.feature {
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.features .feature p {
+.feature p {
     font-size: 1rem;
+    color: #555;
 }
 
 /* Testimonials Section */
 .testimonials {
-    padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .testimonials h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.testimonials .testimonial-item {
-    display: inline-block;
-    width: 45%;
-    margin: 20px 2.5%;
+.testimonial-item {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #ffffff;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonials .testimonial-item p {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 15px;
-}
-
-.testimonials .testimonial-item strong {
-    display: block;
+.testimonial-item p {
     font-size: 1rem;
-    font-weight: bold;
+    color: #555;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #333;
+    background-color: #4b0082;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 15px 10px;
 }
 
-.footer .footer-links {
-    margin-bottom: 10px;
+.footer-links a {
+    color: #ff4500;
+    margin: 0 10px;
 }
 
-.footer .footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1rem;
-}
-
-.footer .footer-links a:hover {
+.footer-links a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .feature {
+        width: calc(50% - 20px);
+    }
+}
+
 @media (max-width: 768px) {
-    .hero {
-        padding: 40px 20px;
+    .header h1 {
+        font-size: 2rem;
     }
-
-    .hero h1 {
-        font-size: 2.5rem;
+    
+    .header p {
+        font-size: 1rem;
     }
-
-    .cta-button {
-        font-size: 1.2rem;
-        padding: 12px 25px;
-    }
-
-    .features .feature {
+    
+    .feature {
         width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .testimonials .testimonial-item {
-        width: 100%;
-        margin-bottom: 20px;
+        margin: 15px 0;
     }
 }
 
 @media (max-width: 480px) {
-    .header nav ul {
-        flex-direction: column;
-        align-items: center;
+    .header .logo img {
+        max-width: 80px;
     }
 
-    .header nav ul li {
-        margin-bottom: 10px;
+    .header h1 {
+        font-size: 1.8rem;
     }
 
-    .features .feature {
-        width: 100%;
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-item {
+        padding: 15px;
     }
 }
